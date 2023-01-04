@@ -10,6 +10,7 @@ public class PassMain {
        // System.out.println("input the length of your password i.e 1 or 10 or 8 : ");
         String lower_cases = "qwertyuiopasdfghjklzxcvbnm";
         String upper_cases = "QWERTYUIOPASDFGHJKLZXCVBNM";
+        String numbers = "0123456789";
 
         String password = "";
 
@@ -18,7 +19,8 @@ public class PassMain {
 
             switch(rand){
                 case 0:
-                    password += String.valueOf((int)(0 * Math.random()));
+                    rand = (int)(numbers.length() * Math.random());
+                    password += String.valueOf(numbers.charAt(rand));
                     break;
                 case 1:
                     rand = (int)(lower_cases.length() * Math.random());
